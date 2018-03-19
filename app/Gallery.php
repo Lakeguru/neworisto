@@ -8,4 +8,10 @@ class Gallery extends Model
 {
     //
     protected $fillable = ['image'];
+
+    public function gallery()
+    {
+        return $this->hasMany('App\User');
+    }
+
 }

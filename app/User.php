@@ -18,6 +18,21 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+    public function product()
+    {
+        return $this->belongsTo('App\Product');
+    }
+
+    public function gallery()
+    {
+        return $this->belongsTo('App\Gallery');
+    }
+
+    public function service()
+    {
+        return $this->belongsTo('App\Service');
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *
