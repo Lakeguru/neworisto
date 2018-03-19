@@ -50,15 +50,15 @@
 		
 		<div class="container m-t-5p">
 			<div class="row">
-					{{--  @foreach($products as $product)  --}}
+					@foreach($products as $product)
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail no-bd bg-white">
 						<a href="p29.html"><img src="assets/img/images-33.jpeg" class="h-200"></a>
-						<p class="p-5p"><span class="w-900 f-18"></span><br> 
+						<p class="p-5p"><span class="w-900 f-18">{{$product->produt_name}}</span><br> {{$product->product_description}}
 						<a class="c-browno f-right" href="p29.html"> Read More</a></p> 
 					</div>
 				</div>
-			{{--  @endforeach  --}}
+			@endforeach
 				
 			</div>
 		</div>
@@ -132,4 +132,12 @@
 		    document.documentElement.scrollTop = 0;
 		}
 	</script>
+
+{{--  DB_CONNECTION=pgsql
+DB_HOST=ec2-54-243-210-70.compute-1.amazonaws.com
+DB_PORT=5432
+DB_DATABASE=dd2l62qpf9856a
+DB_USERNAME=esmrdvspxjpyop
+DB_PASSWORD=befdf23aef0c0b4da1f1c31f3a906f6d451aeba9f7bbbefd65d753557bfeec15  --}}
+
 </html>
