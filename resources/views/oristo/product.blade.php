@@ -10,11 +10,11 @@
                     <div class="item active">
                         <div class="container-fluid">
                             <div class="row bs bd-brand bd-4">
-                                {{--  @foreach ($products as $product)  --}}
-                                <a href="accelerator.html"> <div class="top col-md-6 col-xs-12 p-r-0 p-l-0"><img src="assets/img/product/accelerator.jpg" class="img-responsive"></div></a>
+                                @foreach ($products as $product)
+                                <a href="accelerator.html"> <div class="top col-md-6 col-xs-12 p-r-0 p-l-0"><img src="{{ asset("product/$product->product_image") }}" class="img-responsive"></div></a>
                                 <div class=" col-md-6 col-xs-12">
                                     <h2 class="slidhv"><a href="accelerator.html"> ACCELERATOR</a></h2>
-                                    <p>Accelerator is the material that when mixed with a catalyst and resin, speeds up the chemical reaction between the catalyst and the resin (usually in the polymerizing of resin).</p>
+                                    <p>{{$product->product_description}}</p>
                                     <div class="row">
                                         <div class="col-md-4"></div>
                                         <div class="col-md-4 text-center mm-t-10 tp-b-10">
@@ -24,7 +24,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {{--  @endforeach  --}}
+                            @endforeach
                         </div>            
                     </div> 
                     
@@ -42,7 +42,7 @@
                 <div class="controls draggable ui-widget-content col-md-12 col-xs-12 bd-4 m-t-10">
                     <ul class="nav ui-widget-header">
                 @foreach($products as $product)
-                        <li data-target="#custom_carousel" data-slide-to="0" class="active m-r-10"><a href="#"><img src="assets/img/product/accelerator.jpg" class="width-108 mwidth-80 h-100"><small>{{$product->product_name}}</small></a>
+                        <li data-target="#custom_carousel" data-slide-to="0" class="active m-r-10"><a href="#"><img src="{{ asset("product/$product->product_image") }}" class="width-108 mwidth-80 h-100"><small>{{$product->product_name}}</small></a>
                         </li>
                     @endforeach
                         

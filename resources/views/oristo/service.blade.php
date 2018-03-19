@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-4">
                 <div class="thumbnail no-bd bg-liter">
-                    <a href="s1.html"><img src="assets/img/images-33.jpeg" class="h-200"></a>
+                    <a href="s1.html"><img src="{{ asset("service/$service->service_image") }}" class="h-200"></a>
                     <p class="p-5p"><span class="w-900 f-18">{{$service->service_name}}</span><br> {{$service->service_description}} 
                     <a class="c-browno f-right" href="s1.html"> Read More</a></p> 
                 </div>

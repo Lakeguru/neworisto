@@ -48,7 +48,7 @@
 						<div class="row p-t-5p">
 							<div class="col-md-3"></div>
 							<div class="col-md-6">
-								<img src="asset/storage/product/{{$product->product_image}}" class="img-responsive">
+								<img src="{{ asset("product/$product->product_image") }}" class="img-responsive">
 							</div>
 							<div class="col-md-3"></div>
 						</div>
