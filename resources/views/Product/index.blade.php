@@ -50,15 +50,15 @@
 		
 		<div class="container m-t-5p">
 			<div class="row">
-					@foreach($products as $product)
+					{{--  @foreach($products as $product)  --}}
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail no-bd bg-white">
 						<a href="p29.html"><img src="assets/img/images-33.jpeg" class="h-200"></a>
-						<p class="p-5p"><span class="w-900 f-18">{{$product->produt_name}}</span><br> {{$product->product_description}}
+						<p class="p-5p"><span class="w-900 f-18"></span><br> 
 						<a class="c-browno f-right" href="p29.html"> Read More</a></p> 
 					</div>
 				</div>
-			@endforeach
+			{{--  @endforeach  --}}
 				
 			</div>
 		</div>
