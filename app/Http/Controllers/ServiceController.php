@@ -41,7 +41,8 @@ class ServiceController extends Controller
         $service = new Service();
         $service->service_name = $request->service_name;
         $service->service_description = $request->service_description;
-        $service->service_image = '/service'.$request->$filename;
+        // $service->service_image = '/service'.$request->$filename;
+        $service->service_image = $filenamewithExt;
          $service->save();
         //  Toastr::success('Post successfully Created.','Success',["positionClass" => "toast-top-right"]);
          return redirect()->route('home')->with('success','Oristo Universal');

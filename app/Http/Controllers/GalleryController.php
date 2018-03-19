@@ -37,7 +37,8 @@ class GalleryController extends Controller
   
 
         $gallery = new Gallery();
-        $gallery->image = $request->image;
+        // $gallery->image = $request->image;
+        $servir->image = $filenamewithExt;
         $gallery->save();
 
         return redirect()->route('home')->with('success','Oristo Universal');
