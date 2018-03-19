@@ -59,7 +59,7 @@ class ViewsController extends Controller
         
         Mail::send('emails.contact',$data, function($contact) use ($data){
             $contact->from($data['email']);
-            $contact->to('oluwatosinolamilekan@gmail.com','Oristo Universal');
+            $contact->to('oluwatosinolamilekan@gmail.com','Oristo Un');
             $contact->subject($data['message']);
         
         });

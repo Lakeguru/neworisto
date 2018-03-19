@@ -2,12 +2,17 @@
 # Introduction
 welcome
 The body of your message.
-hello {{ $message }}
+The body of your message.
+The body of your message.
+The body of your message.
+The body of your message.
+
+{{$message}}
 
 @component('mail::button', ['url' => '$url'])
 Button Text
 @endcomponent
 
 Thanks,<br>
-{{ config('app.name') }}
+Oristo Universal
 @endcomponent
