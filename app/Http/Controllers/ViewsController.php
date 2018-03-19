@@ -9,6 +9,7 @@ use App\Gallery;
 use App\Homepagec;
 use Validator;
 use Mail;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
 class ViewsController extends Controller
@@ -63,7 +64,7 @@ class ViewsController extends Controller
             $contact->subject($data['message']);
         });
 
-        // dd($request->all());
+    
 
         $contact = new Contact();
         $contact->first_name = $request->first_name;

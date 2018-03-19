@@ -5,7 +5,7 @@
             <h2 class="w-600 f21 m-t-5p c-white">Our Products</h2>
             <div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner bd-4">
+                {{--  <div class="carousel-inner bd-4">
                     
                     <div class="item active">
                         <div class="container-fluid">
@@ -29,7 +29,7 @@
                     </div> 
                     
                 <!-- End Item -->
-                </div>
+                </div>  --}}
                 <a data-slide="prev" href="#custom_carousel" class="izq carousel-control">
                     <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
                 </a>
