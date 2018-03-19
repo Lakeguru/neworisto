@@ -57,14 +57,13 @@ class ViewsController extends Controller
         ];
 
         
-        Mail::send('emails.contact',$data, function($contact) use ($data){
+        Mail::send('emails.contact', ['mail_message' => $data['message'], 'last_name' => $data['last_name'] ], function($contact) use ($data){
             $contact->from($data['email']);
-            $contact->to('oluwatosinolamilekan@gmail.com','Oristo Un');
+            $contact->to('oluwatosinolamilekan@gmail.com','Oristo Universal');
             $contact->subject($data['message']);
-        
         });
 
-        dd($request->all());
+        // dd($request->all());
 
         $contact = new Contact();
         $contact->first_name = $request->first_name;
