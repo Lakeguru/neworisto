@@ -22,9 +22,7 @@
                     <li class="f1 m-r-10 dropdown show-on-hover">
                         <a href="#" class="btn bg-browno bd-4 c-white p-t-10 p-b-10" data-toggle="dropdown">SERVICES</a>
                         <ul class="dropdown-menu l-_42">
-                            <li><a href="service1.html" class=""> SERVICE1 </a></li>
-                            <li><a href="service2.html" class="">SERVICE2</a></li>
-                            <li><a href="service3.html" class="">SERVICE3</a></li>
+                            <li><a href="{{ route('service.all_service') }}" class="">ALL SERVICES</a></li>
                         </ul>
                     </li>
                     <li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('gallery') }}">GALLERY</a></li>

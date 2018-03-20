@@ -23,14 +23,14 @@ Route::get('allgallery','ViewsController@gallery')->name('gallery');
 Route::get('logout','DashboardController@destroy')->name('logout');
 Route::post('contact','ViewsController@store')->name('post.contact');
 Route::get('all_product','ProductController@all')->name('all.product');
-// Route::get('/dashboard','DashboardController@dashboard');
+Route::get('all_service','ServiceController@all_service')->name('service.all_service');
+Route::get('Serivce/{service}','ServiceController@show')->name('service.show');
+Route::get('Produdct/{product}','ProductController@show')->name('product.show');
 Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix'=>'admin','middleware'=>'auth'], function (){
-    // Route::get('/dashboard','DashboardController@dashboard')->name('dashboard.index');
-    
     Route::get('/slider','DashboardController@homepagec')->name('dashboard.slider');
     Route::post('postslider','DashboardController@slider')->name('dashboard.post');
     Route::get('product','ProductController@create')->name('product.index');

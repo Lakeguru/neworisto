@@ -27,6 +27,11 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="">
+	<!-- scroll top -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">
+		<img src="assets/img/oil.svg" class="width-40">
+	</button>
+
 
 	<ul class="cb-slideshow">
         <li class="li"><span>Image 01</span></li>
@@ -37,45 +42,27 @@
         <li class="li"><span>Image 06</span></li>
     </ul>
 
-	@include(Oristo.navbar)
+	@include(oristo.navbar)
 
 	<section class="">
-		<div class="container p-t-7p mm-t-20p tm-t-7p ">
+		<div class="container p-t-5p mm-t-20p tm-t-7p ">
 			<div class="row">
-				<div class="col-md-2"> </div>
+				<div class="col-md-2"></div>
 				<div class="col-md-8">
-					<div class="bg-liter bs bd-4 p-b-5p">
-						<div class="row p-t-5p">
-							<div class="col-md-3"></div>
-							<div class="col-md-6">
-								<img src="{{ asset("product/$product->product_image") }}" class="img-responsive">
-							</div>
-							<div class="col-md-3"></div>
-						</div>
-						<p class="w-900 f-30 mf-25 p-l-5p p-r-5p p-t-5p c-browno">{{$product->product_name}}</p>
-						<p class="p-l-5p p-r-5p p-t-5 l-h1 f-16 j-ta">{{$product->product_description}}</p>
-						
-					</div>
-					<div class="row p-t-4p">
-						<div class="col-md-4"></div>
-						<div class="col-md-6"></div>
-						<div class="col-md-2 ">
-							<a class="btn bg-browno width-100 bd-4 c-white f4 m-t-5p m-b-5p" href="polyester-resin.html">NEXT</a>
-						</div>
+					<div class="bg-grey99 p-b-5p">
+						<img src="{{ asset("product/$product->product_image") }}" class="width-748 mwidth-100p h-350 mh-auto twidth-100p">
+						<p class="w-900 f-30 p-l-5p p-r-5p p-t-5p c-browno">{{$product->product_name}}</p>
+						<p class="p-l-5p p-r-5p p-t-5 l-h1 f-16 j-ta">{{$product->service_description}}</p>
 					</div>
 				</div>
-					
 				<div class="col-md-2"></div>
 			</div>
 		</div>
 	</section>
 
-	
 	<footer class="bg-liter">
-
 		
-		<div class="container m-t-5p p-t-10 p-b-10">
-
+		<div class="container m-t-5p">
 			<p class="text-center"> &copy;Copyright 2012&nbsp;  &bull;All Right Reserved&nbsp;  &bull;Oristo Universal Company&nbsp; &reg; 93 Obafemi Awolowo Way Ikeja Lagos 100001&nbsp; &bull; P.O. Box 2870</p>
 		</div>
 	</footer>
@@ -86,7 +73,7 @@
 	<script type="text/javascript" src="libraries/bootstrap/js/jquery-3.1.1.min.js"></script>
 
     <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
-   <!-- background sliding -->
+    <!-- background sliding -->
     <script type="text/javascript" src="libraries/bootstrap/js/modernizr.custom.86080.js"></script>
 </body>
 	
@@ -103,36 +90,31 @@
 
 			  else{
 				  $(".change").css("background" , "transparent");
-				  $(".change").css("color" , "black");  	
+				  $(".change").css("color" , "");  	
 			  }
 		  })
-		});
+		})
 		
 
-		// $(document).ready(function(ev){
-		//     var items = $(".nav li").length;
-		//     var leftRight=0;
-		//     if(items>5){
-		//         leftRight=(items-5)*50*-1;
-		//     }
-		//     $('#custom_carousel').on('slide.bs.carousel', function (evt) {
-		        
-		 
-		//       $('#custom_carousel .controls li.active').removeClass('active');
-		//       $('#custom_carousel .controls li:eq('+$(evt.relatedTarget).index()+')').addClass('active');
-		//     })
-		//     $('.nav').draggable({ 
-		//         axis: "x",
-		//          stop: function() {
-		//             var ml = parseInt($(this).css('left'));
-		//             if(ml>0)
-		//             $(this).animate({left:"0px"});
-		//                 if(ml<leftRight)
-		//                     $(this).animate({left:leftRight+"px"});
-		                    
-		//         }
-		      
-		//     });
-		// });
-    </script>
+	</script>
+
+    <!-- scroll -->
+	<script>
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		        document.getElementById("myBtn").style.display = "block";
+		    } else {
+		        document.getElementById("myBtn").style.display = "none";
+		    }
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		    document.body.scrollTop = 0;
+		    document.documentElement.scrollTop = 0;
+		}
+	</script>
 </html>

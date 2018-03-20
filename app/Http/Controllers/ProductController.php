@@ -54,6 +54,12 @@ class ProductController extends Controller
 
     }
 
+    public function all_product()
+    {
+        $products = Product::latest()->get();
+        return view ('Product.all_product',compact('products'));
+    }
+
     public function show(Product $product)
     {
         return view('Product.show');

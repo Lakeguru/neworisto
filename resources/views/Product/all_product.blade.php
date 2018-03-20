@@ -8,6 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Oristo Universal</title>
+	<link rel="icon" type="image/jpg" href="assets/img/logo.jpg">
 	
 
 	<!-- STYLESHEETS-->
@@ -18,6 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/checkbox.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style4.css">
+	
 
 
 	<!-- WEBFONT -->
@@ -32,6 +34,7 @@
 		<img src="assets/img/oil.svg" class="width-40">
 	</button>
 
+
 	<ul class="cb-slideshow">
         <li class="li"><span>Image 01</span></li>
         <li class="li"><span>Image 02</span></li>
@@ -42,33 +45,30 @@
     </ul>
 
 	@include('oristo.navbar')
-	
-
+   	
 	<section class="m-t-7p mm-t-0">
-		<div class="m-t-5p mm-t-20p tm-t-7p">
-
-		
-		<div class="container m-t-5p">
-			<div class="row">
-					@foreach($products as $product)
-				<div class="col-md-3 col-sm-6">
-					<div class="thumbnail no-bd bg-white">
-						<a href="p29.html"><img src="{{ asset("product/$product->product_image") }}" class="h-200"></a>
-						<p class="p-5p"><span class="w-900 f-18">{{$product->produt_name}}</span><br> {{$product->product_description}}
-						<a class="c-browno f-right" href="/product/{{ $product->id}}"> Read More</a></p> 
-					</div>
-				</div>
-			@endforeach
-				
-			</div>
+		<div class=" m-t-5p mm-t-20p tm-t-7p">
+			<div class="container p-t-5p">
+				<div class="row">
+                @foreach($products as $product)
+					<div class="col-md-3 col-sm-6">
+                        <div class="thumbnail no-bd bg-liter">
+                            <a href="woven-rovi.html"><img src="{{ asset("product/$product->product_image") }}" class="h-200"></a>
+                            <p class="p-5p j-ta"><span class="w-900 f-18">{{$product->product_name}}><br>{{$product->product_description}}. 
+                            <a class="c-browno f-right" href="/product/{{ $product->id}}"> Read More</a></p> 
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+            </div>
 		</div>
 		<div class="container  m-t-5p">
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="col-md-4 text-center">
 					<div class="pagination mm-t-0">
-					  	<a href="product.html" class=" m-r-10">1</a>
-					  	<a href="product1.html" class="active m-r-10">2</a>
+					  	<a href="product.html" class="active m-r-10">1</a>
+					  	<a href="product1.html" class="m-r-10">2</a>
 					</div>
 				</div>
 				<div class="col-md-4"></div>
@@ -77,11 +77,11 @@
 	</section>
 
 	<footer class="bg-liter">
-		
 		<div class="container m-t-5p">
 			<p class="text-center"> &copy;Copyright 2012&nbsp;  &bull;All Right Reserved&nbsp;  &bull;Oristo Universal Company&nbsp; &reg; 93 Obafemi Awolowo Way Ikeja Lagos 100001&nbsp; &bull; P.O. Box 2870</p>
 		</div>
-	</footer>	
+	</footer>
+	
 	
 	
 	
@@ -132,12 +132,4 @@
 		    document.documentElement.scrollTop = 0;
 		}
 	</script>
-
-{{--  DB_CONNECTION=pgsql
-DB_HOST=ec2-54-243-210-70.compute-1.amazonaws.com
-DB_PORT=5432
-DB_DATABASE=dd2l62qpf9856a
-DB_USERNAME=esmrdvspxjpyop
-DB_PASSWORD=befdf23aef0c0b4da1f1c31f3a906f6d451aeba9f7bbbefd65d753557bfeec15  --}}
-
 </html>

@@ -44,6 +44,19 @@ class ServiceController extends Controller
 
     }
 
+    public function all_service()
+    {
+        $services = Service::latest()->get();
+        return view('Service.all_service',compact('services'));
+    }
+
+    public function show(Service $service)
+    {
+        // $services = Service::findorFail($service);
+        // $services  = Service::latest()->get();
+        return view('Service.show');
+    }
+
     public function destroy($id)
     {
         Service::find($id)->delete();
