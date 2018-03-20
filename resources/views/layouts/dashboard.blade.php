@@ -44,13 +44,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Oristo {{Auth::user()->name}}</a>
+                <a class="navbar-brand" href="{{ route('home') }}">Oristo {{Auth::user()->name}}</a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="{{ route('home') }}">
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
@@ -96,6 +96,7 @@
                                 <li>
                                     <a href="#">All Products</a>
                                 </li>
+                                
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -218,13 +219,44 @@
                         </a>
                     </div>
                 </div>
+                
             </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>NAMES</th>
+                            <th>EMAIL</th>
+                            <th>PHONE NUMBER</th>
+                            <th>MESSAGE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($contacts as $contact)
+                        <tr>
+                            <td>{{$contact->id}}</td>
+                            <td>{{$contact->first_name}}{{$contact->last_name}}</td>
+                            <td>{{$contact->email}}</td>
+                            <td>{{$contact->phone_number}}</td>
+                            <td>{{$contact->message}}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.table-responsive -->
+
         </div>
         <!-- /#page-wrapper -->
+
+        
 
     </div>
     <!-- /#wrapper -->
 
+    
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
 

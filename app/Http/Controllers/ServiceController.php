@@ -44,4 +44,10 @@ class ServiceController extends Controller
 
     }
 
+    public function destroy($id)
+    {
+        Service::find($id)->delete();
+        return redirect()->route('home')->with('success','Oristo Universal');
+    }
+
 }

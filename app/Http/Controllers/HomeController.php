@@ -32,7 +32,8 @@ class HomeController extends Controller
         $productcount = Product::count();
         $contacttoday= Contact::whereRaw('date(created_at) = ?', [Carbon::today()])->count();
         $gallerycount = Gallery::count();
+        $contacts = Contact::latest()->get();
         
-        return view('home',compact('servicecount','productcount','contacttoday','gallerycount'));
+        return view('home',compact('servicecount','productcount','contacttoday','gallerycount','contacts'));
     }
 }

@@ -79,16 +79,16 @@
                             </div>
                         </li>
                         <li>
-                            <a href="dashboard.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="{{ route('home') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="homepage.html"><i class="fa fa-home fa-fw"></i> Homepage</a>
+                            <a href="{{ route('home') }}"><i class="fa fa-home fa-fw"></i> Homepage</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-music fa-fw"></i> Product<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="product_add.html">Add New Product</a>
+                                    <a href="{{ route('product.index') }}">Add New Product</a>
                                 </li>
                                 <li>
                                     <a href="#">All Products</a>
@@ -100,7 +100,7 @@
                             <a href="#"><i class="fa fa-calendar fa-fw"></i> Service<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="service_add.html">Add New Service</a>
+                                    <a href="{{ route('service.create') }}">Add New Service</a>
                                 </li>
                                 <li>
                                     <a href="#">All Service</a>
@@ -109,7 +109,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="gallery.html"><i class="fa fa-camera-retro fa-fw"></i> Gallery</a>
+                            <a href="{{ route('gallery.create') }}"><i class="fa fa-camera-retro fa-fw"></i> Gallery</a>
                         </li>
                     </ul>
                 </div>

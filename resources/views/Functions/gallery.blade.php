@@ -60,24 +60,20 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					
-					<ul class="nav navbar-nav navbar-right p-t-5">
-						<ul class="nav navbar-nav navbar-right p-t-5 ul">
-							<li class="f1 m-r-10">
-								<a href="about.html" class="btn bg-browno bd-4 c-white p-t-10 p-b-10">ABOUT</a>
-							</li>
-							<li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="product.html">PRODUCTS</a></li>
-							<li class="f1 m-r-10 dropdown show-on-hover">
-								<a href="#" class="btn bg-browno bd-4 c-white p-t-10 p-b-10" data-toggle="dropdown">SERVICES</a>
-								<ul class="dropdown-menu l-_42">
-									<li><a href="service1.html" class=""> SERVICE1 </a></li>
-									<li><a href="service2.html" class="">SERVICE2</a></li>
-									<li><a href="service3.html" class="">SERVICE3</a></li>
-								</ul>
-							</li>
-							<li class="f1 m-r-10"><a class="btn bg-liter bd-4 p-t-10 p-b-10" href="gallery.html">GALLERY</a></li>
-							<li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="contact.html">CONTACT</a></li>
-						</ul>
-					</ul>
+						<ul class="nav navbar-nav navbar-right p-t-20 ul">
+								<li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('about') }}">ABOUT</a></li>
+								<li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('product') }}">PRODUCTS</a></li>
+								<li class="f1 m-r-10 dropdown show-on-hover">
+									<a href="#" class="btn bg-browno bd-4 c-white p-t-10 p-b-10" data-toggle="dropdown">SERVICES</a>
+									<ul class="dropdown-menu l-_42">
+										<li><a href="service1.html" class=""> SERVICE1 </a></li>
+										<li><a href="service2.html" class="">SERVICE2</a></li>
+										<li><a href="service3.html" class="">SERVICE3</a></li>
+									</ul>
+								</li>
+								<li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('gallery') }}">GALLERY</a></li>
+								<li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('contact') }}">CONTACT</a></li>
+							</ul>
 				</div><!-- /.navbar-collapse -->
 			</div>
 		</nav>

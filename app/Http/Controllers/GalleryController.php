@@ -21,27 +21,26 @@ class GalleryController extends Controller
             'image' => 'required|image|mimes:jpeg,jpg,bmp,png',
         ]);
 
-          //save image
-          $filenamewithExt = $request->file('image')->getClientOriginalName();
-        //   return $filenamewithExt;
-          $filename = pathinfo($filenamewithExt, PATHINFO_FILENAME);
-          // RETURN $filename;
-          $extension = $request->file('image')->getClientOriginalExtension();
-          //create new filename
-              // return $extension;
-          $filenametostore = $filename .'_'.time().'.'.$extension;
-          //upload image
-              // return $filenametostore;
-          $path= $request->file('image')->storeAs('public/gallery',$filenametostore);
-          // return $path;
-  
+          
+        $file = $request->file('image') ;
+        // return $file;
+        $fileName = $file->getClientOriginalName() ;
+        $destinationPath = public_path().'/gallery/' ;
+        $file->move($destinationPath,$fileName);
+
 
         $gallery = new Gallery();
-        // $gallery->image = $request->image;
-        $servir->image = $filenamewithExt;
+        $gallery->image = $fileName ;
+        // dd($f->all());
         $gallery->save();
 
         return redirect()->route('home')->with('success','Oristo Universal');
             
+    }
+
+    public function destroy($id)
+    {
+        Gallery::find($id)->delete();
+        return redirect()->route('home')->with('success','Oristo Universal');
     }
 }

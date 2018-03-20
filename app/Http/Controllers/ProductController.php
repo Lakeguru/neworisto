@@ -58,5 +58,11 @@ class ProductController extends Controller
     {
         return view('Product.show');
     }
+
+    public function destroy($id)
+    {
+        Product::find($id)->delete();
+        return redirect()->route('home')->with('success','Oristo Universal');
+    }
     
 }
