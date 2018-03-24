@@ -18,7 +18,7 @@
                 
                 <ul class="nav navbar-nav navbar-right p-t-20 ul">
                     <li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('about') }}">ABOUT</a></li>
-                    <li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('product') }}">PRODUCTS</a></li>
+                    <li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('all.product') }}">PRODUCTS</a></li>
                     <li class="f1 m-r-10 dropdown show-on-hover">
                         <a href="#" class="btn bg-browno bd-4 c-white p-t-10 p-b-10" data-toggle="dropdown">SERVICES</a>
                         <ul class="dropdown-menu l-_42">

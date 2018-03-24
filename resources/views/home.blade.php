@@ -91,10 +91,10 @@
                             <a href="#"><i class="fa fa-music fa-fw"></i> Product<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ route('product.index') }}">Add New Product</a>
+                                    <a href="{{ route('product.create') }}">Add New Product</a>
                                 </li>
                                 <li>
-                                    <a href="#">All Products</a>
+                                    <a href="{{ route('product.all') }}">All Products</a>
                                 </li>
                                 
                             </ul>
@@ -107,7 +107,7 @@
                                     <a href="{{ route('service.create') }}">Add New Service</a>
                                 </li>
                                 <li>
-                                    <a href="#">All Service</a>
+                                    <a href="{{ route('service.all') }}">All Service</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

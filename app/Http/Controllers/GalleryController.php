@@ -14,11 +14,17 @@ class GalleryController extends Controller
         return view ('Gallery.create');
     }
 
+    public function all()
+    {
+        // $gallery = Gallery::latest()->get();
+        return view('Gallery.index');        
+    }
+
     public function store(Request $request)
     {
         
         $validator = Validator::make($request->all(), [
-            'image' => 'required|image|mimes:jpeg,jpg,bmp,png',
+            'image' => 'required|image|mimes:jpeg,jpg,bmp,png|max:2048',
         ]);
 
           
@@ -37,6 +43,14 @@ class GalleryController extends Controller
         return redirect()->route('home')->with('success','Oristo Universal');
             
     }
+
+    public function show($id)
+    {
+        $service = Service::findorFail($id);
+        return view('Service.show',compact('service'));
+
+    }
+
 
     public function destroy($id)
     {

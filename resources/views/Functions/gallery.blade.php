@@ -41,164 +41,22 @@
         <li class="li"><span>Image 05</span></li>
         <li class="li"><span>Image 06</span></li>
     </ul>
-
-	<header>
-		<nav class="navbar change navbar-fixed-top p-b-35" role="navigation">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<!-- <span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span> -->
-						<span class="c-dark">MENU</span>
-					</button>
-					<a class="navbar-brand p-t-5" href="index.html"><img src="assets/img/logo.jpg" class="img-circle width-90 h-80"></a>
-				</div>
-		
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse navbar-ex1-collapse">
-					
-						<ul class="nav navbar-nav navbar-right p-t-20 ul">
-								<li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('about') }}">ABOUT</a></li>
-								<li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('product') }}">PRODUCTS</a></li>
-								<li class="f1 m-r-10 dropdown show-on-hover">
-									<a href="#" class="btn bg-browno bd-4 c-white p-t-10 p-b-10" data-toggle="dropdown">SERVICES</a>
-									<ul class="dropdown-menu l-_42">
-										<li><a href="service1.html" class=""> SERVICE1 </a></li>
-										<li><a href="service2.html" class="">SERVICE2</a></li>
-										<li><a href="service3.html" class="">SERVICE3</a></li>
-									</ul>
-								</li>
-								<li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('gallery') }}">GALLERY</a></li>
-								<li class="f1 m-r-10"><a class="btn bg-browno bd-4 c-white p-t-10 p-b-10" href="{{ route('contact') }}">CONTACT</a></li>
-							</ul>
-				</div><!-- /.navbar-collapse -->
-			</div>
-		</nav>
-	</header>
-	
+@include('oristo.navbar')
 
 	<section class="m-t-7p mm-t-0">
 		<div class="m-t-5p mm-t-20p tm-t-7p">
 			<div class="container p-t-5p">
 				<div class="row">
-					
+					@foreach($galleries as $gallery)
 					<div class="col-md-3 col-sm-6">
-						<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="fibre galss aquarium" data-image="assets/img/gallery/fibregalss-aquarium.jpg" data-target="#image-gallery">
-			                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/fibregalss-aquarium.jpg" alt="Short alt text">
+						<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="fibre galss aquarium" data-image="{{ asset("gallery/$gallery->image") }}" data-target="#image-gallery">
+			                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="{{ asset("gallery/$gallery->image") }}" alt="Short alt text">
 			            </a>
 					</div>
-
-					<div class="col-md-3 col-sm-6 mm-t-5p">
-						<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="fibre glass ponds in the mould" data-image="assets/img/gallery/fibreglass-ponds.jpg" data-target="#image-gallery">
-			                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300" src="assets/img/gallery/fibreglass-ponds.jpg" alt="Short alt text">
-			            </a>
-					</div>
-
-					<div class="col-md-3 col-sm-6 mm-t-5p tm-t-5p">
-						<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="fibre glass roofing sheets" data-image="assets/img/gallery/fibreglass-roofing-sheets.jpg" data-target="#image-gallery">
-			                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300" src="assets/img/gallery/fibreglass-roofing-sheets.jpg" alt="Short alt text">
-			            </a>
-					</div>
-
-					<div class="col-md-3 col-sm-6 mm-t-5p tm-t-5p">
-						<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="fibre galss aquarium" data-image="assets/img/gallery/fibreglass-speed-boats.jpg" data-target="#image-gallery">
-			                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300" src="assets/img/gallery/fibreglass-speed-boats.jpg" alt="Short alt text">
-			            </a>
-					</div>
+					@endforeach
 				</div>
 			</div>
 		</div>
-		<div class="container m-t-5p">
-			<div class="row">
-					
-				<div class="col-md-3 col-sm-6">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="fibre glass swim pools" data-image="assets/img/gallery/fibreglass-swim-pools.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/fibreglass-swim-pools.jpg" alt="Short alt text">
-		            </a>
-				</div>
-				<div class="col-md-3 col-sm-6 mm-t-5p">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="fibre glass swim pools" data-image="assets/img/gallery/fibreglass-swm-pools.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/fibreglass-swm-pools.jpg" alt="Short alt text">
-		            </a>
-				</div>
-
-				<div class="col-md-3 col-sm-6 mm-t-5p tm-t-5p">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="fish ponds" data-image="assets/img/gallery/fish-ponds.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/fish-ponds.jpg" alt="Short alt text">
-		            </a>
-				</div>
-
-				<div class="col-md-3 col-sm-6 mm-t-5p tm-t-5p">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="gelcoat artistic finishing" data-image="assets/img/gallery/gelcoat-artistic-finishing.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/gelcoat-artistic-finishing.jpg" alt="Short alt text">
-		            </a>
-				</div>
-			</div>
-		</div>
-		
-		<div class="container p-t-5p">
-			<div class="row">
-				
-				<div class="col-md-3 col-sm-6">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="gelcoat finish" data-image="assets/img/gallery/gelcoat-finish.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/gelcoat-finish.jpg" alt="Short alt text">
-		            </a>
-				</div>
-
-				<div class="col-md-3 col-sm-6 mm-t-5p">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="gelcoat finishing" data-image="assets/img/gallery/gelcoat-finishing.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/gelcoat-finishing.jpg" alt="Short alt text">
-		            </a>
-				</div>
-
-				<div class="col-md-3 col-sm-6 mm-t-5p tm-t-5p">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="Marble gelcoat finishing" data-image="assets/img/gallery/marble-gelcaot-finishing.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/marble-gelcaot-finishing.jpg" alt="Short alt text">
-		            </a>
-				</div>
-
-				<div class="col-md-3 col-sm-6 mm-t-5p tm-t-5p">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="gelcoat homesink finishing" data-image="assets/img/gallery/gelcoat-homesink-finishing.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/gelcoat-homesink-finishing.jpg" alt="Short alt text">
-		            </a>
-				</div>
-			</div>
-		</div>
-		
-		<div class="container m-t-5p">
-			<div class="row">
-					
-				<div class="col-md-3 col-sm-6">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="Ponds" data-image="assets/img/gallery/ponds.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/ponds.jpg" alt="Short alt text">
-		            </a>
-				</div>
-
-				<div class="col-md-3 col-sm-6 mm-t-5p">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="Spansive tanks" data-image="assets/img/gallery/spasive-tanks.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/spasive-tanks.jpg" alt="Short alt text">
-		            </a>
-				</div>
-
-				<div class="col-md-3 col-sm-6 mm-t-5p tm-t-5p">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="Startling cherry kitchen cabinets" data-image="assets/img/gallery/startling-cherry-kitchen-cabinets-with-granite-countertops-designer-countertops.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/startling-cherry-kitchen-cabinets-with-granite-countertops-designer-countertops.jpg" alt="Short alt text">
-		            </a>
-				</div>
-
-				<div class="col-md-3 col-sm-6 mm-t-5p tm-t-5p">
-					<a class="thumbnail hvr-grow no-bd" href="#" data-image-id="" data-toggle="modal" data-title="Transparent polycarbonate" data-image="assets/img/gallery/transparent-polycarbonate-corrugated-wave-plastic-roofing-sheet.jpg" data-target="#image-gallery">
-		                <img class="img-responsive width-230 h-150 mh-auto mwidth-100p twidth-300"" src="assets/img/gallery/transparent-polycarbonate-corrugated-wave-plastic-roofing-sheet.jpg" alt="Short alt text">
-		            </a>
-				</div>
-			</div>
-		</div>
-
-
-
 		<!-- Gallery modal -->
 		<div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		    <div class="modal-dialog">
@@ -231,7 +89,6 @@
 		        </div>
 		    </div>
 		</div>
-		<!-- end -->
 		<div class="container  m-t-5p">
 			<div class="row">
 				<div class="col-md-4"></div>

@@ -31,7 +31,6 @@
 <body>
 
     <div id="wrapper">
-
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -41,13 +40,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Oristo</a>
+                <a class="navbar-brand" href="{{ route('home') }}">Oristo {{Auth::user()->name}}</a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="{{ route('home') }}">
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
@@ -65,7 +64,6 @@
             </ul>
             <!-- /.navbar-top-links -->
 
-            
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
@@ -89,10 +87,10 @@
                             <a href="#"><i class="fa fa-music fa-fw"></i> Product<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{ route('product.index') }}">Add New Product</a>
+                                    <a href="{{ route('product.create') }}">Add New Product</a>
                                 </li>
                                 <li>
-                                    <a href="#">All Products</a>
+                                    <a href="{{ route('product.all') }}">All Products</a>
                                 </li>
                                 
                             </ul>
@@ -105,7 +103,7 @@
                                     <a href="{{ route('service.create') }}">Add New Service</a>
                                 </li>
                                 <li>
-                                    <a href="#">All Service</a>
+                                    <a href="{{ route('service.all') }}">All Service</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -138,8 +136,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form role="form" action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
-							@csrf
-                                        
+                                        @csrf
                                         <div class="form-group">
                                             <label>Product Name</label>
                                             <input class="form-control" name="product_name" placeholder="">
@@ -150,9 +147,9 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Image</label>
-                                            <input type="file" name="product_image" class="form-control">
+                                            <input type="file" class="form-control" name="product_image">
                                         </div>
-                                        <button type="submit"  class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-default">Submit</button>
                                     </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->

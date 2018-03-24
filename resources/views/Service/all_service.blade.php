@@ -20,6 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/checkbox.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style4.css">
 	
+	
 
 
 	<!-- WEBFONT -->
@@ -55,13 +56,12 @@
                         @foreach($services as $service)
                     <div class="col-md-3 col-sm-6">
                         <div class="thumbnail no-bd bg-white">
-                            <a href="p29.html"><img src="{{ asset("service/$service->service_image") }}" class="h-200"></a>
+                            <a href="{{ route('service.show',$service->id) }}"><img src="{{ asset("service/$service->service_image") }}" class="h-200"></a>
                             <p class="p-5p"><span class="w-900 f-18">{{$service->produt_name}}</span><br> {{$service->service_description}}
-                            <a class="c-browno f-right" href="/Service/{{ $service->id}}"> Read More</a></p> 
+                            <a class="c-browno f-right" href="{{ route('service.show',$service->id) }}"> Read More</a></p> 
                         </div>
                     </div>
                 @endforeach
-                    
                 </div>
             </div>
             <div class="container  m-t-5p">

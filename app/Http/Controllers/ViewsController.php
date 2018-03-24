@@ -9,6 +9,7 @@ use App\Gallery;
 use App\Homepagec;
 use Validator;
 use Mail;
+use Carbon\Carbon;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
@@ -31,7 +32,8 @@ class ViewsController extends Controller
 
     public function product()
     {
-        return view('Functions.product');
+        $products =Product::latest()->get();
+        return view('Functions.product',compact('products'));
     }
 
     public function contact()
@@ -80,6 +82,8 @@ class ViewsController extends Controller
 
     public function gallery()
     {
-        return view ('Functions.gallery');
+        $galleries =Gallery::latest()->get();
+        return view ('Functions.gallery',compact('galleries'));
     }
+
 }

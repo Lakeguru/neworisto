@@ -7,12 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     //
-    protected $fillable = ['product_image','product_description','product_name'];
-
-    public function product()
-    {
-        return $this->hasMany('App\User');
-    }
-
-    
+    protected $fillable = ['product_name','product_description','product_image'];
 }

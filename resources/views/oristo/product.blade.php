@@ -42,7 +42,7 @@
                 <div class="controls draggable ui-widget-content col-md-12 col-xs-12 bd-4 m-t-10">
                     <ul class="nav ui-widget-header">
                 @foreach($products as $product)
-                        <li data-target="#custom_carousel" data-slide-to="0" class="active m-r-10"><a href="#"><img src="{{ asset("product/$product->product_image") }}" class="width-108 mwidth-80 h-100"><small>{{$product->product_name}}</small></a>
+                        <li data-target="#custom_carousel" data-slide-to="0" class="active m-r-10"><a href="{{ route('product.show',$product->id) }}"><img src="{{ asset("product/$product->product_image") }}" class="width-108 mwidth-80 h-100"><small>{{$product->product_name}}</small></a>
                         </li>
                     @endforeach
                         
@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4 text-center">
-                        <a class="btn bg-browno bd-4 c-white f4 m-t-5p m-b-5p" href="product.html">View More Products</a>
+                        <a class="btn bg-browno bd-4 c-white f4 m-t-5p m-b-5p" href="{{ route('all.product') }}">View More Products</a>
                     </div>
                     <div class="col-md-4"></div>
                 </div>

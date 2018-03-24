@@ -42,20 +42,17 @@
     </ul>
 
 	@include('oristo.navbar')
-	
 
 	<section class="m-t-7p mm-t-0">
 		<div class="m-t-5p mm-t-20p tm-t-7p">
-
-		
 		<div class="container m-t-5p">
 			<div class="row">
 					@foreach($products as $product)
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail no-bd bg-white">
-						<a href="p29.html"><img src="{{ asset("product/$product->product_image") }}" class="h-200"></a>
-						<p class="p-5p"><span class="w-900 f-18">{{$product->produt_name}}</span><br> {{$product->product_description}}
-						<a class="c-browno f-right" href="/product/{{ $product->id}}"> Read More</a></p> 
+						<a href="{{ route('product.show',$product->id) }}"><img src="{{ asset("product/$product->product_image") }}" class="h-200"></a>
+						<p class="p-5p"><span class="w-900 f-18">{{$product->product_name}}</span><br> {{$product->product_description}}
+						<a class="c-browno f-right" href="{{ route('product.show',$product->id) }}"> Read More</a></p> 
 					</div>
 				</div>
 			@endforeach
@@ -133,6 +130,8 @@
 		}
 	</script>
 
+</html>
+	
 {{--  DB_CONNECTION=pgsql
 DB_HOST=ec2-54-243-210-70.compute-1.amazonaws.com
 DB_PORT=5432
@@ -140,4 +139,10 @@ DB_DATABASE=dd2l62qpf9856a
 DB_USERNAME=esmrdvspxjpyop
 DB_PASSWORD=befdf23aef0c0b4da1f1c31f3a906f6d451aeba9f7bbbefd65d753557bfeec15  --}}
 
-</html>
+
+{{--  DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=jquery
+DB_USERNAME=root
+DB_PASSWORD=luqman    --}}
